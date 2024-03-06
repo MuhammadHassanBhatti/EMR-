@@ -1,38 +1,438 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  min-height: 100%;
+  font-family: Poppins;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root {
+  min-height: 100%;
+}
+html {
+  min-height: 100%;
+}
+.center-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+}
+.left {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("../src/assets/images/First.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(132, 45, 114, 0.9);
+  z-index: 1;
+}
+.heading {
+  font-size: 45px;
+  font-style: normal;
+  font-family: Poppins;
+  font-weight: 600;
+}
+.transcure-text {
+  background-color: white;
+  color: #842d72;
+  font-weight: 600;
+  font-family: Poppins;
+}
+.subheading {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Poppins;
+}
+.emr-data {
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  font-size: 24px;
+  font-style: normal;
+  font-family: Poppins;
+  font-weight: 500;
+  padding: 50px !important;
+}
+.text-emr {
+  position: absolute;
+  z-index: 3;
+  color: #fff;
+  bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+.right {
+  padding: 30px 100px !important;
+}
+.login {
+  color: #2f3367;
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 30px !important;
+}
+.info {
+  color: #2f3367;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 10px !important;
+}
+.user-name-input {
+  width: 100%;
+  padding-left: 50px !important;
+  background-color: #f5f5f7;
+  border-radius: 10px;
+  border-style: none;
+  color: #8b8fa8;
+  font-family: Poppins;
+  font-style: normal;
+  height: 50px;
+}
+.password-input {
+  width: 100%;
+  padding-left: 50px !important;
+  background-color: #f5f5f7;
+  border-radius: 10px;
+  border-style: none;
+  color: #8b8fa8;
+  font-family: Poppins;
+  font-style: normal;
+  height: 50px;
+}
+.input-parent {
+  position: relative;
+}
+.user-icon {
+  position: absolute;
+  bottom: 8px;
+  left: 20px;
+}
+.fa-user,
+.fa-lock {
+  color: #868aa5;
+}
+.btn-login {
+  background-color: #842d72 !important;
+  width: 100%;
+  border: none;
+  padding: 12px !important;
+  border-radius: 10px;
+  margin-top: 20px !important;
   color: white;
+  font-weight: 600;
+}
+.form-check-input {
+  border-color: #868aa5;
+}
+.check-forget {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.form-check {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.form-check-label {
+  padding-left: 8px;
+  padding-top: 5px;
+  color: #666;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+}
+.forget {
+  color: #842d72;
+  font-family: Poppins;
+  font-size: 16px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+}
+.signUp-Account {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: Poppins;
+  color: #393d6e;
+  font-size: 14px;
+  font-weight: 500;
+  padding-top: 20px;
+}
+.sign-up {
+  color: #393d6e;
+}
+.forget-form {
+  font-family: Poppins;
+  display: flex;
+  justify-content: center;
+  padding: 20px 60px !important;
+}
+.new-password-form {
+  padding: 0% 18%;
+}
+.new-pass-card {
+  padding: 0 40px;
+}
+.sign-up-form {
+  padding: 0% 18%;
+}
+.form-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+.new-user-text {
+  color: #043133;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 40px;
+}
+.match-text {
+  text-align: left !important;
+  color: #4d5959;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+}
+.forget-text {
+  color: #043133;
+  font-family: Poppins;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 80px;
+  padding-left: 12px !important;
+}
+.card-title,
+.text-muted {
+  border: none !important;
+}
+.text-muted {
+  background: #fff;
+  color: #4d5959;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  padding-bottom: 30px !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
+.card-title {
+  color: #043133;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 300px !important;
+  border-color: #842d70 !important;
+  width: 100%;
+}
+.card-body {
+  padding: 20px 120px !important;
+  width: 100%;
+}
+.email-label {
+  text-align: left !important;
+}
+.lable {
+  color: #4d5959;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding-top: 30px !important;
+}
+.btn-reset {
+  border-radius: 3px;
+  background: #842d70 !important;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 40px !important;
+}
+.btn-submit {
+  border-radius: 3px;
+  background: #842d70 !important;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  width: 80%;
+  padding: 6px;
+}
+.btn-cancel {
+  border-radius: 3px;
+  background: #fff !important;
+  border-color: #842d70;
+  color: #842d70;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  width: 80%;
+  padding: 5px;
+}
+.btn-cancel:hover {
+  background-color: #842d70 !important;
+  color: #fff !important;
+  border: none;
+}
+.back-login {
+  color: #842d70;
+  font-family: Poppins;
+  font-weight: 500;
+  text-decoration: none;
+}
+.back-login-link {
+  padding-top: 15px !important;
+}
+.copy-right,
+.terms {
+  color: #032d23;
+  font-size: 14px;
+  font-weight: 500;
+  padding-top: 30px !important;
+}
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.web-link {
+  color: #842d72;
+}
+.header-logo {
+  padding: 10px 30px;
+}
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.btn-Gear,.btn-Bell{
+  padding-right: 10px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (min-width: 320px) and (max-width: 575.9px) {
+  .left {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .right {
+    padding: 20px 40px !important;
+  }
+  .login {
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 20px !important;
+  }
+  .info {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .form-check-label {
+    font-size: 12px;
+    font-weight: 400;
+    padding-left: 5px !important;
+  }
+  .forget {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .check-field {
+    margin-top: 20px !important;
+  }
+  .signUp-Account {
+    font-size: 12px;
+    font-weight: 600;
+    padding-top: 20px !important;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767.9px) {
+  .left {
+    display: none;
+  }
+  .right {
+    padding: 20px 80px !important;
+  }
+  .login {
+    margin-top: 15px !important;
+  }
+  .form-check-label {
+    font-size: 14px;
+  }
+  .forget {
+    font-size: 14px;
+  }
+  .check-field {
+    margin-top: 20px !important;
+  }
+  .signUp-Account {
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 15px !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.9px) {
+  .left {
+    display: none;
+  }
+  .right {
+    padding: 20px 80px !important;
+  }
+  .login {
+    margin-top: 15px !important;
+  }
+  .form-check-label {
+    font-size: 16px;
+  }
+  .forget {
+    font-size: 16px;
+  }
+  .signUp-Account {
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 15px !important;
   }
 }
